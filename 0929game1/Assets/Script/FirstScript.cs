@@ -1,5 +1,3 @@
-using System;
-
 using UnityEngine;
 /// <summary>
 /// KID老師的unity寫法與教學
@@ -24,15 +22,20 @@ namespace FirstGame
         //遊戲預備
         private void Awake()
         {
+            //練習output
+            //文字樣式可用Rich Text編寫
             print(0);
-            Debug.Log("哈囉");
-            Console.WriteLine("ji3u.3");
+            Debug.Log("<b>哈</b><color=yellow>囉</color>");
         }
 
         //遊戲開啟
         private void Start()
         {
-            
+            print("Start!");
+        }
+        private void Update()
+        {
+            print("-");
         }
 
     }
