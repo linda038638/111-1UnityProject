@@ -13,10 +13,15 @@ namespace FirstGame
         private GameObject prefab;
         [SerializeField, Header("spawnBullet")]
         private Transform pointSpawn;
+        [SerializeField, Header("VFX")]
+        private AudioClip soundFire;
+
 
         protected void spawnBullet()
         {
             Instantiate(prefab, pointSpawn.position, pointSpawn.rotation);
+
+            Sound.instance.PlaySound(soundFire, new Vector2(0.5f, 0.7f));
         }
 
 

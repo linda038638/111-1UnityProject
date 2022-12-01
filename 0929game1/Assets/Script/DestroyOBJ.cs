@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace FirstGame
 {
-    public class DestroyOBJ : FireSystemBase
+    public class DestroyOBJ : MonoBehaviour
     {   
 
         private void Awake()

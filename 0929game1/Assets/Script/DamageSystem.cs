@@ -13,14 +13,18 @@ namespace FirstGame
          private string NameTag;
         [SerializeField, Header("Ãz¬µ¹w»sª«")]
         private GameObject prefabExplosion;
+        [SerializeField, Header("VFX")]
+        private AudioClip soundFire;
 
-      
+
         private void OnCollisionEnter2D(Collision2D coll)
         {
             print(coll);
+
             if(coll.gameObject.tag == NameTag)
             {
                 Instantiate(prefabExplosion, transform.position, transform.rotation);
+                Sound.instance.PlaySound(soundFire, new Vector2(0.8f, 1.0f));
                 Destroy(gameObject);
             }
         }

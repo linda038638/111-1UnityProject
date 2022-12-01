@@ -8,12 +8,12 @@ namespace FirstGame
 {
     public class EnemyFireSystem : FireSystemBase
     {
-        private void Awake()
+        private void OnBecameVisible()
         {
-            InvokeRepeating("spawnBullet", 0, 1.5f);
-           
+             InvokeRepeating("spawnBullet", 0, 1.5f);
         }
-       
+      
+
     }
 
 }
